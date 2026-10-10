@@ -4,3 +4,5 @@ const productos = [
   { nombre: "Teclado", precio: 80, enStock: true }
 ];
 
+const saberPrecio = productos.find (item => item.nombre == "Laptop")
+console.log(saberPrecio.precio)
