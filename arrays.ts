@@ -9,8 +9,5 @@ const viajes: Viaje[] = [
   { pais: "colombia", precio: 250, numerosViajeros: 3 },
 ];
 
-const contaFinal: number = viajes.reduce((acc: number, item: Viaje) => {
-  return acc + item.numerosViajeros
-}, 0);
-
-console.log("cuenta final: ", contaFinal)
+const paisconMap = viajes.find ((v) => v.pais == "colombia" && v.numerosViajeros)
+console.log(`vas a ir a:`,paisconMap?.pais, "la cantidad viajeros: ", paisconMap?.numerosViajeros)
