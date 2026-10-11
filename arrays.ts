@@ -1,21 +1,16 @@
-type estadoViaje = "confirmado" | "pendiente" | "cancelado"
-
-interface Viajes {
-    id: number,
-    destino: string,
-    precio: number,
-    viajeros: number
-    estado: estadoViaje,
-    guia?: string;
+interface Viaje {
+  pais: string;
+  precio: number;
+  numerosViajeros: number;
 }
 
-const listaViajes: Viajes[] = [
-  { id: 1, destino: "Cartagena", precio: 500, viajeros: 4, estado: "confirmado", guia: "Carlos" },
-  { id: 2, destino: "Medellín", precio: 500, viajeros: 2, estado: "pendiente" },
-  { id: 3, destino: "Bogotá", precio: 250, viajeros: 5, estado: "confirmado", guia: "Ana" },
-  { id: 4, destino: "Santa Marta", precio: 600, viajeros: 1, estado: "cancelado" }
+const viajes: Viaje[] = [
+  { pais: "argentina", precio: 300, numerosViajeros: 1 },
+  { pais: "colombia", precio: 250, numerosViajeros: 3 },
 ];
 
-const viajesMayor =  listaViajes.filter((item) => item.precio >= 500);
-listaViajes.map((item) => item.destino)
-console.log("viajes superiores a 300 disponibles: ", viajesMayor)
+const contaFinal: number = viajes.reduce((acc: number, item: Viaje) => {
+  return acc + item.precio * item.numerosViajeros;
+}, 0);
+
+console.log("cuenta final: ", contaFinal)
