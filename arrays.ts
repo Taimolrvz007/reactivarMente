@@ -10,7 +10,7 @@ const viajes: Viaje[] = [
 ];
 
 const contaFinal: number = viajes.reduce((acc: number, item: Viaje) => {
-  return acc + item.precio * item.numerosViajeros;
+  return acc + item.numerosViajeros
 }, 0);
 
 console.log("cuenta final: ", contaFinal)
