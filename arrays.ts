@@ -1,16 +1,16 @@
-interface Viaje {
-  pais: string;
-  precio?: number;
-  numerosViajeros: number;
+interface Personas {
+  edad: number,
+  pais: string,
+  nombre:string
 }
 
-const viajes: Viaje[] = [
-  { pais: "argentina", precio: 300, numerosViajeros: 1 },
-  { pais: "colombia",  numerosViajeros: 3 },
-];
-
-const paisconMap = viajes.map(({pais,precio}) => {
-  if (precio === undefined)  `${pais}: sin precio`;
-  return `${pais}: $${precio}`;
-});
-console.log(paisconMap)
+const persona: Personas[] = [
+  { nombre: "Santiago", edad: 21, pais: "Colombia" },
+  { nombre: "Valeria", edad: 24, pais: "Colombia" },
+  { nombre: "Mateo", edad: 19, pais: "Colombia" },
+  { nombre: "Camila", edad: 22, pais: "México" },
+  { nombre: "Lucas", edad: 26, pais: "Argentina" },
+  { nombre: "Sofia", edad: 20, pais: "Chile" },
+  { nombre: "Diego", edad: 25, pais: "Perú" },
+  { nombre: "Elena", edad: 23, pais: "España" }
+]
