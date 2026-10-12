@@ -11,6 +11,10 @@ const persona: Personas[] = [
   { nombre: "Camila", edad: 22, pais: "México" },
   { nombre: "Lucas", edad: 26, pais: "Argentina" },
   { nombre: "Sofia", edad: 20, pais: "Chile" },
-  { nombre: "Diego", edad: 25, pais: "Perú" },
-  { nombre: "Elena", edad: 23, pais: "España" }
+  { nombre: "Diego", edad: 13, pais: "Perú" },
+  { nombre: "Elena", edad: 15, pais: "España" }
 ]
+const club = persona.filter((v) => v.edad >= 18)
+const resultado = club.map(({ nombre, edad, pais }) => {
+  console.log(`Estas personas son: ${nombre}, sus edades corresponden a: ${edad} y son del país: ${pais}`);
+});
