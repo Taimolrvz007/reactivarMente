@@ -16,4 +16,12 @@ const mostrarViaje = viajes.map(({ pais, precio }) => {
   return `${pais}: $${precio}`;
 });
 
-console.log(mostrarViaje)
+const total = viajes.reduce((acc, { precio, numerosViajeros }) => {
+  return acc + ((precio ?? 0) * numerosViajeros);
+}, 0);
+
+console.log(total)
+
+let codigo: string | number
+
+codigo = 5
