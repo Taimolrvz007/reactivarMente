@@ -25,3 +25,10 @@ console.log(total)
 let codigo: string | number
 
 codigo = 5
+
+console.log(codigo)
+
+codigo = "abc"
+
+console.log(codigo)
+
